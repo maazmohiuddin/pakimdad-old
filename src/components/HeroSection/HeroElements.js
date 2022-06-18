@@ -10,7 +10,7 @@ align-items:center;
 padding:0 30px;
 height:800px;
 position:relative;
-z-index:1;
+z - index: 1;
 
 :before{
 

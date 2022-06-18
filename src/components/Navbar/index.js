@@ -3,7 +3,7 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks,N
 import { animateScroll as scroll } from 'react-scroll';
 import { FaBars } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib';
-
+import { Link as LinkS } from 'react-scroll';
 const Navbar = ({ toggle }) => {
     
 
@@ -26,12 +26,12 @@ const Navbar = ({ toggle }) => {
     useEffect(() => { window.addEventListener('scroll', changeNav) }
         , []);
 
-
+    
   return (
     
       <>
           <IconContext.Provider value={{color:'#fff'}}>
-          <Nav scrollNav={scrollNav}>
+              <Nav scrollNav={scrollNav} style={{background:(window.location.pathname != "/" || scrollNav) ?"black":"transparent"}}>
               <NavbarContainer>
                   <NavLogo to="/" onClick={toggleHome}>Pak-Imdaad</NavLogo>  
                   <MobileIcon onClick={toggle}>
